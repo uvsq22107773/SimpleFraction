@@ -1,14 +1,21 @@
+import java.lang.reflect.Array;
+import java.util.*;
+
 public class Fraction {
     Fraction(){
+    }
+    public String toStrin(char[] ss){
+       String s = Arrays.toString(ss) ;
+       return s ; 
+    }
 
-    }
-    public String toString(String ss){
-        String s = ss ;
-        return s ;
-    }
 }
 class Main{
     public static void main(String[] args) {
-        System.out.println("Hello!!");
+
+        char[] charArr = new char[] { 'g', 'e', 'e', 'k', 's' };
+        Fraction fr = new Fraction();
+        String o = fr.toStrin(charArr).replace(" ", "").replace(",", "").replace("]", "").replace("[", "");
+        System.out.println("String : "+o);
     }
 }
